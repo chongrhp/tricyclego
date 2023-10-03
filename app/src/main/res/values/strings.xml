@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TricycleGo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="statistics">2023 statistics</string>
+    <string name="all_expenses">all expenses</string>
+    <string name="expenses_statistics">All expenses</string>
+    <string name="google_play_api_key">AIzaSyD8ZDo3KUiUtage1UFiDOFrHu34uA-Y-lg</string>
+    <string name="none_restricted">AIzaSyBvejZkVogUusuSHKBimuD_5Ug-CGQ9qvM</string>
+
+</resources>

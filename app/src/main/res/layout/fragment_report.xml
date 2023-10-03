@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="reportFragment"
+            type="com.example.tricyclego.fragments.ReportFragment" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ReportFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            tools:context=".MainActivity"
+            tools:ignore="UselessParent">
+
+            <!-- Card view for displaying the -->
+            <!-- Pie chart and details of pie chart -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewGraph"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+
+                <!--Linear layout to display pie chart -->
+                <!-- and details of pie chart-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!--Pie chart to display the data -->
+
+                    <org.eazegraph.lib.charts.PieChart
+                        android:id="@+id/piechart"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:padding="6dp"
+
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/btnYear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@null"
+                                android:clickable="false"
+                                android:saveEnabled="false"
+                                app:layout_constraintStart_toEndOf="@id/chkDate"
+                                app:layout_constraintTop_toBottomOf="@id/view4"
+                                app:srcCompat="@drawable/baseline_date_range_24"
+                                app:tint="@color/background_color"
+                                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/txtYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingStart="15dp"
+                                android:text="2023"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            tools:ignore="DisableBaselineAlignment">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                tools:ignore="RtlHardcoded">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical">
+
+                                    <!--View to display the yellow color icon -->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Jan"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <!--Text view to display Jan -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Jan"
+                                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display Feb -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the Feb color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Feb" />
+
+                                    <!--Text view to display Feb text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Feb"
+                                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display March -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the red color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Mar" />
+
+                                    <!--Text view to display March text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Mar"
+                                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display April -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    tools:ignore="TextSizeCheck">
+
+                                    <!--View to display the April color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Apr" />
+
+                                    <!--Text view to display April text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Apr" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display May -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the May color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/May" />
+
+                                    <!--Text view to display May text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="May" />
+
+                                </LinearLayout>
+                                <!--Linear layout to display June -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the June color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Jun" />
+
+                                    <!--Text view to display June text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Jun" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    tools:ignore="TextSizeCheck">
+
+                                    <!--View to display the yellow color icon -->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Jul" />
+
+                                    <!--Text view to display Jan -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Jul" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display Feb -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the Feb color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Aug" />
+
+                                    <!--Text view to display Feb text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Aug" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display March -->
+
+                                <!--Linear layout to display April -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the red color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Sep" />
+
+                                    <!--Text view to display March text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Sep" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the April color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Oct" />
+
+                                    <!--Text view to display April text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Oct" />
+
+                                </LinearLayout>
+
+                                <!--Linear layout to display May -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp">
+
+                                    <!--View to display the May color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Nov" />
+
+                                    <!--Text view to display May text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Nov" />
+
+                                </LinearLayout>
+                                <!--Linear layout to display June -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="5dp"
+                                    tools:ignore="TextSizeCheck">
+
+                                    <!--View to display the June color icon-->
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/Dec" />
+
+                                    <!--Text view to display June text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:text="Dec" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtTotalExpenses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Expenses: 0.0"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <!--Creating another linear layout -->
+                    <!-- to display pie chart details -->
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Another Card view for displaying -->
+            <!-- Use of programming languages -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardViewGraph"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+                <!--Relative layout to display -->
+                <!-- use of programming languages -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:text="Monthly Expenses"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--Text view to use of -->
+                        <!-- programming languages text-->
+
+                        <!--View to display the line-->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <!--Text view to display R -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Jan"
+                                android:textSize="18sp" />
+
+                            <!--Text view to display the -->
+                            <!-- percentage of programming language -->
+                            <!-- used. For now default set to 0-->
+                            <TextView
+                                android:id="@+id/tvJan"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!--View to display the line-->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Feb"
+                                android:textSize="18sp" />
+
+                            <!--Text view to display the percentage -->
+                            <!-- of programming language used. -->
+                            <!-- For now default set to 0-->
+
+                            <TextView
+                                android:id="@+id/tvFeb"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Mar"
+                                android:textSize="18sp" />
+
+                            <!--Text view to display the percentage -->
+                            <!-- of programming language used. -->
+                            <!-- For now default set to 0-->
+                            <TextView
+                                android:id="@+id/tvMar"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Apr"
+                                android:textSize="18sp" />
+
+                            <!--Text view to display the percentage -->
+                            <!-- of programming language used. -->
+                            <!-- For now default set to 0-->
+                            <TextView
+                                android:id="@+id/tvApr"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- New May -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="May"
+                                android:textSize="18sp" />
+
+                            <!--Text view to display the percentage -->
+                            <!-- of programming language used. -->
+                            <!-- For now default set to 0-->
+                            <TextView
+                                android:id="@+id/tvMay"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewMay"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- June -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Jun"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvJun"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewJune"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- July -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Jul"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvJul"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewJul"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- August -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Aug"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvAug"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewSep"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- September -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Sep"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvSep"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewOct"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- October -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Oct"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvOct"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewNov"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!-- November -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Nov"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvNov"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/Dec"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/color_two" />
+
+                        <!--December -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Dec"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvDec"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="sans-serif-light"
+                                android:text="0"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/color_one"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</layout>

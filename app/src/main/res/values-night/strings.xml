@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="statistics">2023 statistics</string>
+    <string name="all_expenses">all expenses</string>
+    <string name="expenses_statistics">All expenses</string>
+</resources>

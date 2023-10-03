@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnuHome"
+        android:icon="@drawable/baseline_map_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/mnuActivity"
+        android:icon="@drawable/baseline_list_alt_24"
+        android:title="Activity" />
+    <item
+        android:id="@+id/mnuChat"
+        android:icon="@drawable/baseline_chat_bubble_outline_24"
+        android:title="Chat"
+        android:visible="false" />
+    <item
+        android:id="@+id/mnuReport"
+        android:icon="@drawable/baseline_analytics_24"
+        android:title="Report" />
+    <item
+        android:id="@+id/mnuAccount"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Account" />
+</menu>

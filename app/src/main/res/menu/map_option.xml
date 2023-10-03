@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/normal_map"
+        android:icon="@drawable/normal"
+        android:title="Normal"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/hybrid_map"
+        android:icon="@drawable/hybrid"
+        android:title="Hybrid"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/satellite_map"
+        android:icon="@drawable/satellite"
+        android:title="Satellite"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/terrain_map"
+        android:icon="@drawable/terrain"
+        android:title="Terrain"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mnuLogout"
+        android:title="Logout"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086397127588",
+    "project_id": "tricycle-go-82650",
+    "storage_bucket": "tricycle-go-82650.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086397127588:android:03d9409ef3f9ec629bbf31",
+        "android_client_info": {
+          "package_name": "com.example.tricyclego"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086397127588-jqt2aom2br94vuf0pd6cq7uurcdno825.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6H1rpiAK6XkNWLVrhAo39ZsdxyD4Wp1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086397127588-jqt2aom2br94vuf0pd6cq7uurcdno825.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
